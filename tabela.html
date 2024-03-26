@@ -25,6 +25,16 @@
     .table {
       margin-top: 20px; /* Margem superior para separar da parte superior */
     }
+
+    /* Estilo para listras em linhas */
+    .table-striped tbody tr:nth-of-type(odd) {
+      background-color: rgba(255,255,255,.05); /* Cor de fundo para linhas ímpares */
+    }
+
+    /* Estilo para listras em colunas */
+    .table-striped tbody tr:nth-of-type(odd) td {
+      background-color: rgba(255,255,255,.05); /* Cor de fundo para células em linhas ímpares */
+    }
   </style>
 </head>
 <body>
@@ -33,37 +43,39 @@
     <p>Aqui estão os resultados da busca:</p>
     <div class="row mt-4 justify-content-center">
       <div class="col-md-10">
-        <table class="table table-bordered table-dark">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Universidade</th>
-              <th>Curso</th>
-              <th>Estado</th>
-              <th>Turno</th>
-              <th>Nota de Corte</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>Universidade ABC</td>
-              <td>Engenharia Civil</td>
-              <td>SP</td>
-              <td>Manhã</td>
-              <td>750</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Universidade XYZ</td>
-              <td>Medicina</td>
-              <td>RJ</td>
-              <td>Noite</td>
-              <td>820</td>
-            </tr>
-            <!-- Adicione mais linhas conforme necessário -->
-          </tbody>
-        </table>
+        <div class="container">
+          <table class="table table-bordered table-striped table-dark">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Universidade</th>
+                <th>Curso</th>
+                <th>Estado</th>
+                <th>Turno</th>
+                <th>Nota de Corte</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Universidade ABC</td>
+                <td>Engenharia Civil</td>
+                <td>SP</td>
+                <td>Manhã</td>
+                <td>750</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Universidade XYZ</td>
+                <td>Medicina</td>
+                <td>RJ</td>
+                <td>Noite</td>
+                <td>820</td>
+              </tr>
+              <!-- Adicione mais linhas  -->
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </div>
