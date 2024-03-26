@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabela de Cursos</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QCk3hf8K0M9BL8Bk4f+mp8s67E8+gog8z/hVeiRlM9xpwHylF2VKNFc8f2v/XjpU" crossorigin="anonymous">
+  <!-- Custom CSS -->
+  <style>
+    body {
+      background-color: #343a40; /* Cinza escuro */
+      color: #fff; /* Cor do texto */
+      font-size: 18px; /* Tamanho da fonte */
+    }
+
+    .container {
+      text-align: center; /* Centralizar o conteúdo */
+    }
+
+    th, td {
+      text-align: center; /* Centralizar o conteúdo da tabela */
+    }
+
+    .table {
+      margin-top: 20px; /* Margem superior para separar da parte superior */
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="mb-4">Tabela de Cursos</h1>
+    <p>Aqui estão os resultados da busca:</p>
+    <div class="row mt-4 justify-content-center">
+      <div class="col-md-10">
+        <table class="table table-bordered table-dark">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Universidade</th>
+              <th>Curso</th>
+              <th>Estado</th>
+              <th>Turno</th>
+              <th>Nota de Corte</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Universidade ABC</td>
+              <td>Engenharia Civil</td>
+              <td>SP</td>
+              <td>Manhã</td>
+              <td>750</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Universidade XYZ</td>
+              <td>Medicina</td>
+              <td>RJ</td>
+              <td>Noite</td>
+              <td>820</td>
+            </tr>
+            <!-- Adicione mais linhas conforme necessário -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS (opcional, apenas se você precisar de funcionalidades JavaScript do Bootstrap) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-hSiVpAGs0bd4+WX2p5PvqOX8ZPRDy2rvfJbQfPEzPEOVc6fH/YB4oKYE3nJ4yW2t" crossorigin="anonymous"></script>
+</body>
+</html>

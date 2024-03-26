@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consultor de Custos</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QCk3hf8K0M9BL8Bk4f+mp8s67E8+gog8z/hVeiRlM9xpwHylF2VKNFc8f2v/XjpU" crossorigin="anonymous">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-MNCuFYQJeH1KH5zSqmMMzR8FhZp7RKwOAbcQ6tXwDrBaqo4iF7A1QSNAbfn0LZiZqChcOva5uLwJ2tFaWYt5Rg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Custom CSS -->
+  <style>
+    body {
+      background-color: #343a40; /* Cinza escuro */
+      color: #fff; /* Cor do texto */
+      font-size: 18px; /* Tamanho da fonte */
+    }
+
+    .container {
+      text-align: center; /* Centralizar o conteúdo */
+    }
+
+    .form-control {
+      width: 45%;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="mb-4">Consultor de Custos</h1>
+    <p>Pesquise por todos os cursos do Brasil utilizando o filtro que desejar!!</p>
+    <div class="row mt-4 justify-content-center">
+      <div class="col-md-5">
+        <input type="text" class="form-control" id="cursoInput" placeholder="Digite o curso...">
+      </div>
+      <div class="col-md-3">
+        <select class="form-select mt-2" id="turnoSelect">
+          <option value="">Selecione o turno</option>
+          <option value="manha">Manhã</option>
+          <option value="tarde">Tarde</option>
+          <option value="noite">Noite</option>
+        </select>
+      </div>
+      <div class="col-md-3">
+        <select class="form-select mt-2" id="ufSelect">
+          <option value="">Selecione a UF</option>
+          <option value="AC">Acre</option>
+          <option value="AL">Alagoas</option>
+          <option value="BA">Bahia</option>
+          <option value="CE">Ceará</option>
+          <option value="MA">Maranhão</option>
+          <option value="PI">Piauí</option>
+          <option value="RJ">Rio de Janeiro</option>
+          <option value="SP">São Paulo</option>
+          <option value="SE">Sergipe</option>
+          <!-- Adicione outras UFs conforme necessário -->
+        </select>
+      </div>
+    </div>
+    <div class="row mt-4 justify-content-center">
+      <div class="col-md-11">
+        <button class="btn btn-primary" onclick="filtrarCursos()"><i class="fas fa-search"></i> Filtrar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS (opcional, apenas se você precisar de funcionalidades JavaScript do Bootstrap) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-hSiVpAGs0bd4+WX2p5PvqOX8ZPRDy2rvfJbQfPEzPEOVc6fH/YB4oKYE3nJ4yW2t" crossorigin="anonymous"></script>
+  
+  <script>
+    function filtrarCursos() {
+      var curso = document.getElementById("cursoInput").value;
+      var turno = document.getElementById("turnoSelect").value;
+      var uf = document.getElementById("ufSelect").value;
+
+      // Aqui você pode redirecionar para outra página HTML contendo a tabela listando as opções
+      window.location.href = "tabela.html?curso=" + curso + "&turno=" + turno + "&uf=" + uf;
+    }
+  </script>
+</body>
+</html>
